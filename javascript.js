@@ -1,6 +1,13 @@
 // Scripts go here
 "use strict";
 
-let txt = "Please visit Microsoft!";
-let newText = txt.replace("Microsoft", "W3Schools");
-console.log(newText);
+function ask(question, yes, no) {
+  if (confirm(question)) yes();
+  else no();
+}
+
+ask(
+  "Do you agree?",
+  () => alert("You agreed."),
+  () => alert("You canceled the execution.")
+);
